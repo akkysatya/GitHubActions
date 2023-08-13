@@ -1,1 +1,18 @@
 
+name: 'custom GITHUB_ENV var demo'
+on: 
+ workflow_despatch:
+jobs:
+ custom_GITHUB_ENV:
+ runs-on:
+ steps:
+ - name: set the value
+   id: step_one
+   run: |
+    echo "action_state=yellow" >> $GITHUB_ENV
+ - name: use the value
+   id: step_one
+   run: |
+    echo "{{ env.action_state }}"
+
+
