@@ -2,7 +2,7 @@
 name: 'Custom Env Vars'
 on: 
  workflow_dispatch:
-Env:
+env:
   DAY_OF_WEEK: Funday
   testvar: value-1
 jobs: 
