@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: A basic workflow
+name: A Basic workflow
 
 # Controls when the workflow will run
 on:
@@ -37,14 +37,14 @@ jobs:
   build-api:
     runs-on: windows-latest
     steps:
-     -run: echo "build API"
+      - run: echo "build API"
   build-db:
     needs: build-app
     runs-on: windows-latest
     steps:
-     -run: echo "Hello windows"
+      - run: echo "Hello windows"
   package:
     needs: [build-api, build-db]
     runs-on: macos-latest
     steps:
-     -run: echo "Hello macos"
+      - run: echo "Hello macos"
