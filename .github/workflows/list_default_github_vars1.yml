@@ -2,7 +2,8 @@
 name: 'default environment variables'
 on:
  workflow-dispatch:
-jobs: mainjob:
+jobs: 
+ mainjob:
   name: 'print the default githaub vars'
   runs-on: ubuntu-latest
   steps:
