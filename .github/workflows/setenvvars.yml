@@ -1,7 +1,7 @@
 
 name: 'custom GITHUB_ENV var demo'
-on: 
- workflow_despatch:
+on:    
+  workflow_dispatch:
 jobs:
  custom_GITHUB_ENV:
  runs-on:
