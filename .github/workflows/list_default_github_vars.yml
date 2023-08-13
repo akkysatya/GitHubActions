@@ -1,7 +1,7 @@
 
 name: List all default GitHub vars
 on:
- workflow-dispatch:
+ workflow_dispatch:
 jobs:
  ubuntu-environment-variables:
   runs-on: ubuntu-latest
