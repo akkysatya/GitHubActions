@@ -1,10 +1,13 @@
 
 name: Artifacts Demo
-on: workflow_dispatch
+on: 
+  workflow_dispatch:
+  push:
 jobs:
  job_1:
   name: Upload Artifacts
-  runs-on: [self-hosted, Linux, X64]
+  runs-on: 
+    - self-hosted
   steps:
    - name: "create a local file"
      run: echo "I am storing data in this file , So i can use this in subsequent jobs" >> file.txt
@@ -15,7 +18,8 @@ jobs:
       retention-days: 10
  job_2:
   name: Download artifact
-  runs-on: [self-hosted, Linux, X64]
+  runs-on: 
+    - self-hosted
   needs: job_1
   steps:
    - uses: actions/download-artifact@v2
